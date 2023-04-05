@@ -290,7 +290,7 @@ The system leverages the flexibility and simplicity of Python to create an inter
 
 DAO Democracy
 implement honeycomb data into this please
-```
+
 import time
 import os
 
