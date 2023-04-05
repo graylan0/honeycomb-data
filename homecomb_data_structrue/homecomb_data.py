@@ -1,9 +1,9 @@
-To integrate HoneycombDataStructure into the given script, you can use it to store the generated response chunks from GPT-3. This will allow the bot to access previous responses and their relationships in the honeycomb grid. I will demonstrate this in two parts.
+#To integrate HoneycombDataStructure into the given script, you can use it to store the generated response chunks from GPT-3. This will allow the bot to access previous responses and their relationships in the honeycomb grid. I will demonstrate this in two parts.
 
-Part 1: Importing and initializing HoneycombDataStructure
+#Part 1: Importing and initializing HoneycombDataStructure
 
-python
-Copy code
+#python
+#
 from honeycomb_data_structure import HoneycombDataStructure
 
 # Global variable to store responses in HoneycombDataStructure
@@ -58,8 +58,8 @@ async def honeycomb_cell(ctx, row: int, col: int):
             await ctx.send("No response in this cell.")
     else:
         await ctx.send("Invalid cell coordinates.")
-In Part 1, I added the response_honeycomb as a global variable and modified the send_chunks function to save the generated responses in the honeycomb grid. The bot will now store each generated response in a ThreeSidedDeque and set it in the honeycomb grid, moving to the next cell after sending a response.
+#In Part 1, I added the response_honeycomb as a global variable and modified the send_chunks function to save the generated responses in the honeycomb grid. The bot will now store each generated response in a ThreeSidedDeque and set it in the honeycomb grid, moving to the next cell after sending a response.
 
-In Part 2, I added a new command honeycomb_cell that takes row and column numbers as arguments and retrieves the corresponding response from the honeycomb grid, if it exists. This allows you to access previous responses by specifying their positions in the grid.
+#In Part 2, I added a new command honeycomb_cell that takes row and column numbers as arguments and retrieves the corresponding response from the honeycomb grid, if it exists. This allows you to access previous responses by specifying their positions in the grid.
 
-Now, you can run the script and use the !trideque command to generate and store responses, and the !honeycomb_cell command to access the responses in the honeycomb grid. You can further customize the script to handle different scenarios or commands based on your needs.
+#Now, you can run the script and use the !trideque command to generate and store responses, and the !honeycomb_cell command to access the responses in the honeycomb grid. You can further customize the script to handle different scenarios or commands based on your needs.
